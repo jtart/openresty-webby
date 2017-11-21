@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  webby:
+    image: openresty/openresty
+    volumes:
+      - ./:/app
+      - ./conf:/usr/local/openresty/nginx/conf
+    ports:
+      - 3000:3000
